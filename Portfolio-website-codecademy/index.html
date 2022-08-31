@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <h2 id="logo">Tommi Laakso</h2>
+        <ul class="navigation-items">
+            <li class="navigation-item">
+                <a href="#about-me">About me</Menu></a>
+            </li>
+            <li class="navigation-item">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#skills">Skills</a>
+            </li>
+            <li class="navigation-item">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Main section -->
+    <main>
+        <section id="about-me">
+            <div class="about-me-container">
+                <div class="about-me-text-container">
+                    <h2>About me</h2>
+                        <p>Hi I'm Tommi Laakso, and am a former professional Counter-strike player, 
+                        mostly known for playing in the Finnish scene for nearly two decades and eventually reaching the top.</p>
+                        <p>I retired from Counter-strike in 2020 and was known for being at my best when my back was against the wall and in big games</p>
+                        <p>After quitting Counter-strike I have focused on programming and inspire to be a fullstack engineer working in challenging projects.</p>
+                        <p>In my freetime I like to go to the gym, read about history, world events and health</p>
+                        <p>Fun fact! I've been programming for <span id="time-container"></span> seconds!</p>
+                </div>
+                <img src="./resources/images/20220622_184351.jpg" alt="A photo of Tommi Laakso" class="portrait">
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <details class="project-container">
+                <summary class="project-title">
+                    <h3>Codecademy Fullstack course!</h3>
+                </summary>
+                <img src="./resources/images/Codecademy-full-stack-engineer-new-cover.png" class="project-img">
+                    <p>I'm currently in progress of completing Codecademy Full Stack Engineer course</p>
+            </details>
+            <details class="project">
+                <summary class="project-title">
+                    <h3>Full Stack Open By Helsinki University!</h3>
+                </summary>
+                <img src="./resources/images/fullstack_stack_1842x1080.png.webp" class="project-img">
+                <p>My next project is going to be completing Helsinki Universitys Full Stack Open course</p>
+            </details>
+            <details class="project">
+                <summary class="project-title">
+                    <h3>Buutti web course</h3>
+                </summary>
+                <img src="./resources/images/buutti.png" class="project-img">
+                <p>I'm going to be participiating in the Buutti webpage course along when working on the latter projects!</p>
+            </details>     
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div id="skills-container"></div>
+                <i class="fa-brands fa-html5 fa-2xl"></i>
+                <i class="fa-brands fa-react fa-2xl"></i> 
+                <i class="fa-brands fa-js fa-2xl"></i>
+                <i class="fa-brands fa-css3 fa-2xl"></i>
+                <i class="fa-brands fa-node fa-2xl"></i>
+                <i class="fa-brands fa-git fa-2xl"></i>
+                <i class="fa-brands fa-github fa-2xl"></i>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        Made with 
+        <span class="heart">♥</span>
+        in Espoo
+    </footer>
+    <script>
+        const timeContainer = document.getElementById("time-container");
+        const BIRTH_DAY = "5-6-2020";
+        const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+        const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+        setInterval(() => {
+            const now = new Date();
+            const difference = Math.floor(
+            (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+        );
+
+        timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  
+    </script>
+    <script src="https://kit.fontawesome.com/c3f3bd8414.js" crossorigin="anonymous"></script>   
+</body>
+</html>

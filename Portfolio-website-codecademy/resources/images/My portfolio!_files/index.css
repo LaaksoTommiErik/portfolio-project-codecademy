@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ 
+:root {
+   --spacing-1: 8px;
+   --spacing-2: 12px;
+   --spacing-3: 16px;
+   --spacing-4: 24px;
+   --border-radius: 12px;
+   --font-color: #323232;
+}
+
+body {
+    font-family: "Open sans";
+    padding: 0 var(--spacing-3);
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+html {
+    font-size: 16px;
+    background-color: white;
+    color: var(--font-color)
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-3)
+}
+
+h2 {
+    font-family: "Proza libre", sans-serif;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+main {
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+details {
+    cursor: pointer;
+    display: block;
+}
+
+details > summary:first-of-type {
+    display: list-item;
+    counter-increment: list-item 0;
+    
+}
+
+summary {
+    list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+
+.navigation-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.navigation-item {
+    text-decoration: none;
+    margin: var(--spacing-1)
+}
+
+.heart {
+    color: red;
+}
+
+.about-me-container {
+    flex-direction: column;
+}
+
+.about-me-text-container {
+    margin-right: var(--spacing-3);
+} 
